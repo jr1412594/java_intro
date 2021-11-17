@@ -15,6 +15,8 @@ public class helloWorld1
         // int integerTwo = integerOne + 1;
         // System.out.println(integerOne);
         // System.out.println(integerTwo);
+
+
         byte bigByte = 127;
         short bigShort = 32767;
         int bigInt = 210000000;
@@ -38,24 +40,25 @@ public class helloWorld1
 
         //how to convert a string
                     //Must start with uppercase type followed by function .toString()
-        String byteString = Byte.toString(bigByte);
-        String shortString = Short.toString(bigByte);
-        String intString = Integer.toString(bigInt);
-        String longString = Long.toString(bigByte);
-        String floatString = Float.toString(bigByte);
-        String doubleString = Double.toString(bigByte);
-        String booleanString = Boolean.toString(trueOrFalse);
+
+        // String byteString = Byte.toString(bigByte);
+        // String shortString = Short.toString(bigByte);
+        // String intString = Integer.toString(bigInt);
+        // String longString = Long.toString(bigByte);
+        // String floatString = Float.toString(bigByte);
+        // String doubleString = Double.toString(bigByte);
+        // String booleanString = Boolean.toString(trueOrFalse);
 
         double aDoubleValue = 3.14546566464;
         int doubleToInt = (int) aDoubleValue;
             //To change to other primitive types
             // (byte) (short) (long) (double) (float)
 
-        int stringToInt = Integer.parseInt(intString);
+        // int stringToInt = Integer.parseInt(intString);
         // parseShort, parseLong, parseByte, parseFloat, parseDouble, parseBoolean
         // System.out.println(randomChar);
         // System.out.println(anotherChar);
         // System.out.println(byteString);
-        System.out.println(stringToInt);
+        // System.out.println(stringToInt);
     }
 }
