@@ -17,26 +17,26 @@ public class helloWorld1
         // System.out.println(integerTwo);
 
 
-        byte bigByte = 127;
-        short bigShort = 32767;
-        int bigInt = 210000000;
-        long bigLong = 9220000000000000000L;
-        float bigFloat = 3.14F;
-        double bigDouble = 3.1415291561516;
+        // byte bigByte = 127;
+        // short bigShort = 32767;
+        // int bigInt = 210000000;
+        // long bigLong = 9220000000000000000L;
+        // float bigFloat = 3.14F;
+        // double bigDouble = 3.1415291561516;
 
         // System.out.println(Float.MAX_VALUE);
         // System.out.println(Double.MAX_VALUE);
 
-        boolean trueOrFalse = true;
+        // boolean trueOrFalse = true;
 
-        char randomChar = 67; //character code number (starts are 65)
-        char anotherChar = 'A';
-        char escapeChar = '\n'; // lots of these.
+        // char randomChar = 67; //character code number (starts are 65)
+        // char anotherChar = 'A';
+        // char escapeChar = '\n'; // lots of these.
 
-        String randomString = "what the eff is this?";
-        String anotherString = "Stuff";
+        // String randomString = "what the eff is this?";
+        // String anotherString = "Stuff";
         
-        String andAnotherString = randomString + anotherString;
+        // String andAnotherString = randomString + anotherString;
 
         //how to convert a string
                     //Must start with uppercase type followed by function .toString()
@@ -49,8 +49,8 @@ public class helloWorld1
         // String doubleString = Double.toString(bigByte);
         // String booleanString = Boolean.toString(trueOrFalse);
 
-        double aDoubleValue = 3.14546566464;
-        int doubleToInt = (int) aDoubleValue;
+        // double aDoubleValue = 3.14546566464;
+        // int doubleToInt = (int) aDoubleValue;
             //To change to other primitive types
             // (byte) (short) (long) (double) (float)
 
