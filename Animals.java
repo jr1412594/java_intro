@@ -29,8 +29,4 @@ public class Animals {
         this.favFood = favFood;
     }
 
-
-    public static void main(String[] args) {
-
-    }
 }
