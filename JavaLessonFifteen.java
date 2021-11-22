@@ -11,7 +11,7 @@ public class JavaLessonFifteen {
         // genericVehicle.setSpeed(65.5);
         // genericVehicle.setWheels(5);
         System.out.println();
-        System.out.println(genericVehicle.getStpeed());
+        System.out.println(genericVehicle.getSpeed());
         System.out.println("This car has " + genericVehicle.getWheel() + " wheels");
 
         System.out.println();

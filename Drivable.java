@@ -7,7 +7,7 @@ public interface Drivable {
 
     void setWheels(int numWheels);
 
-    double getStpeed();
+    double getSpeed();
 
     void setSpeed(double speed);
 }

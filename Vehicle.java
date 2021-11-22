@@ -1,4 +1,4 @@
-public class Vehicle extends Crashable implements Drivable{
+public class Vehicle extends Crashable implements Drivable, Cloneable {
 
 
     int numOfWheels = 2;
@@ -14,7 +14,7 @@ public class Vehicle extends Crashable implements Drivable{
         this.numOfWheels = numWheels;
     }
 
-    public double getStpeed() {
+    public double getSpeed() {
         return this.theSpeed;
     }
 
@@ -38,4 +38,21 @@ public class Vehicle extends Crashable implements Drivable{
         this.numOfWheels = wheels;
         this.theSpeed = speed;
     } 
+
+    public String toString() {
+        return "num of wheels " + this.numOfWheels;
+    }
+
+    public Object clone() {
+        Vehicle car;
+
+        try {
+            car = (Vehicle) super.clone();
+        }
+
+        catch(CloneNotSupportedException e) {
+            return null;
+        }
+        return car;
+    }
 }
