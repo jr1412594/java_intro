@@ -154,13 +154,13 @@ public class JavaLesson22 extends JFrame {
                 if (addNums.isSelected()) {
                     totalCalc = addNumbers(number1, number2, howManyTimes.getValue()); 
                 } 
-                // else if (subtractNums.isSelected()) {
-                //     totalCalc = subtracNumbers(number1, number2, howManyTimes.getValue());
-                // } else if (multNums.isSelected()) {
-                //     totalCalc = multiplyNumbers(number1, number2, howManyTimes.getValue());
-                // } else {
-                //     totalCalc = divdeNumbers(number1, number2, howManyTimes.getValue());
-                // }
+                else if (subtractNums.isSelected()) {
+                    totalCalc = subtractNumbers(number1, number2, howManyTimes.getValue());
+                } else if (multNums.isSelected()) {
+                    totalCalc = multiplyNumbers(number1, number2, howManyTimes.getValue());
+                } else {
+                    totalCalc = divideNumbers(number1, number2, howManyTimes.getValue());
+                }
         
             }
 
@@ -171,19 +171,12 @@ public class JavaLesson22 extends JFrame {
                 NumberFormat numFormat = NumberFormat.getNumberInstance();
                 JOptionPane.showMessageDialog(JavaLesson22.this, numFormat.format(totalCalc), "Solution", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                // NumberFormat numFormat = NumberFormat.getNumberInstance();
                 JOptionPane.showMessageDialog(JavaLesson22.this, totalCalc, "Solution", JOptionPane.INFORMATION_MESSAGE);
             }
-            
+        
         }
 
     }
-
-    // static int addNumbers(double number1, double number2, int times) {
-    //     int xNum = (int) Math.round(number1);
-    //     int yNum = (int) Math.round(number2);
-    //     return (xNum + yNum) * times;
-    // }
 
     private class ListenForSlider implements ChangeListener {
 
