@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-import java.awt.Color;
+
 import java.awt.event.*;
 
 import javax.swing.event.ChangeEvent;
@@ -8,6 +8,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import java.text.NumberFormat;
+
 
 import javax.swing.border.*;
 
@@ -19,6 +20,8 @@ public class JavaLesson22 extends JFrame {
     JCheckBox dollarSign, commaSeparator;
     JRadioButton addNums, subtractNums, multNums, divideNums;
     JSlider howManyTimes;
+
+    JTextArea textArea1;
 
     double number1, number2, totalCalc;
 
@@ -123,6 +126,10 @@ public class JavaLesson22 extends JFrame {
 
         thePanel.add(howManyTimes);
 
+        textArea1 = new JTextArea(5,5);
+
+        thePanel.add(textArea1);
+
         this.add(thePanel);
         this.setVisible(true);
 
@@ -143,19 +150,101 @@ public class JavaLesson22 extends JFrame {
                     JOptionPane.showMessageDialog(JavaLesson22.this, "Those are not numbers", "Error", JOptionPane.ERROR_MESSAGE);
                     System.exit(0);
                 }
+
+                if (addNums.isSelected()) {
+                    totalCalc = addNumbers(number1, number2, howManyTimes.getValue()); 
+                } 
+                // else if (subtractNums.isSelected()) {
+                //     totalCalc = subtracNumbers(number1, number2, howManyTimes.getValue());
+                // } else if (multNums.isSelected()) {
+                //     totalCalc = multiplyNumbers(number1, number2, howManyTimes.getValue());
+                // } else {
+                //     totalCalc = divdeNumbers(number1, number2, howManyTimes.getValue());
+                // }
+        
+            }
+
+            if (dollarSign.isSelected()) {
+                NumberFormat numFormat = NumberFormat.getCurrencyInstance();
+                JOptionPane.showMessageDialog(JavaLesson22.this, numFormat.format(totalCalc), "Solution", JOptionPane.INFORMATION_MESSAGE);
+            } else if (commaSeparator.isSelected()) {
+                NumberFormat numFormat = NumberFormat.getNumberInstance();
+                JOptionPane.showMessageDialog(JavaLesson22.this, numFormat.format(totalCalc), "Solution", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                // NumberFormat numFormat = NumberFormat.getNumberInstance();
+                JOptionPane.showMessageDialog(JavaLesson22.this, totalCalc, "Solution", JOptionPane.INFORMATION_MESSAGE);
             }
             
         }
 
     }
 
+    // static int addNumbers(double number1, double number2, int times) {
+    //     int xNum = (int) Math.round(number1);
+    //     int yNum = (int) Math.round(number2);
+    //     return (xNum + yNum) * times;
+    // }
+
     private class ListenForSlider implements ChangeListener {
 
         @Override
         public void stateChanged(ChangeEvent e) {
-            // TODO Auto-generated method stub
+            
+            if(e.getSource() == howManyTimes) {
+                label3.setText("Perform How Many TImes? " + howManyTimes.getValue());
+            }
             
         }
 
     }
+
+    public static double addNumbers(double number1, double number2, int howManyTimes) {
+
+        double total = 0;
+
+        int i = 1;
+
+        while (i <= howManyTimes) {
+            total = total + (number1 + number2);
+            i++;
+        }
+        return total;
+    }
+    public static double subtractNumbers(double number1, double number2, int howManyTimes) {
+
+        double total = 0;
+
+        int i = 1;
+
+        while (i <= howManyTimes) {
+            total = total + (number1 - number2);
+            i++;
+        }
+        return total;
+    }
+    public static double multiplyNumbers(double number1, double number2, int howManyTimes) {
+
+        double total = 0;
+
+        int i = 1;
+
+        while (i <= howManyTimes) {
+            total = total + (number1 * number2);
+            i++;
+        }
+        return total;
+    }
+    public static double divideNumbers(double number1, double number2, int howManyTimes) {
+
+        double total = 0;
+
+        int i = 1;
+
+        while (i <= howManyTimes) {
+            total = total + (number1 / number2);
+            i++;
+        }
+        return total;
+    }
+
 }
