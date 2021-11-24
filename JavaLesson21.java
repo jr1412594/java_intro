@@ -20,9 +20,13 @@ public class JavaLesson21 extends JFrame {
     }   
 
     public JavaLesson21() {
-
+        // this = this JFrame;
+        // set size of fram width and height
         this.setSize(400, 400);
+        // set location. below will center on screen
+        // can set it to different locations
         this.setLocationRelativeTo(null);
+        // Sets the frame to close when prompted
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.setTitle("This is the J frame");
